@@ -65,11 +65,9 @@ class Student
      LIMIT 1
    SQL
 
-   puts DB[:conn].execute(sql,name)
+    found = DB[:conn].execute(sql,name)
+    self.new_from_db(found[0])
 
-  #  map do |row|
-  #    self.new_from_db(row)
-  #  end.first
  end
 
  def update()
