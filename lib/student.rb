@@ -65,7 +65,7 @@ class Student
 
     found = DB[:conn].execute(sql,name)
     new_stud_obj = self.new_from_db(found[0])
-    new_stud_obj
+    new_stud_objl
  end
 
  def update()
