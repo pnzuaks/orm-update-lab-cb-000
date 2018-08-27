@@ -64,7 +64,8 @@ class Student
    SQL
 
     found = DB[:conn].execute(sql,name)
-    puts self.new_from_db(found[0])
+    puts found
+    # puts self.new_from_db(found[0])
 
  end
 
@@ -72,5 +73,5 @@ class Student
    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
    DB[:conn].execute(sql, self.name, self.grade, self.id)
  end
- 
+
 end
